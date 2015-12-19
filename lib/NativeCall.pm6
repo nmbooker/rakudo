@@ -160,6 +160,7 @@ my role NativeCallSymbol[Str $name] {
 }
 
 sub guess_library_name($lib) is export(:TEST) {
+    die '$lib not defined' without $lib;
     my $libname;
     my Str $apiversion = '';
     my Str $ext = '';
